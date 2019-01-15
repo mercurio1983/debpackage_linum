@@ -1,0 +1,38 @@
+Format: 1.8
+Date: Fri, 11 Jan 2019 20:22:40 +0100
+Source: electrotest
+Binary: electrotest
+Architecture: source amd64
+Version: 0.0-1
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: Martti Mercurio <mercurio@kth.se>
+Changed-By: Martti Mercurio <mercurio@kth.se>
+Description:
+ electrotest - auto-generated package by debmake
+Closes: 2000
+Changes:
+ electrotest (0.0-1) UNRELEASED; urgency=low
+ .
+           [Martti Mercurio]
+   *  Adding soname and libcomponent realname
+ .
+           [Martti Merurio]
+   *  Changed the Makefile
+ .
+   * Initial release (Closes: #2000)
+Checksums-Sha1:
+ b742fa47c36565844dd4a49fe2a333aae326aa55 844 electrotest_0.0-1.dsc
+ 8c683e1e5c00917fd06b7ea5b1e22a7bb387ccfb 7992 electrotest_0.0.orig.tar.gz
+ 3639344df4ccf8c4ea4a097bc9d652ad45d9f468 2368 electrotest_0.0-1.debian.tar.xz
+ 4b36480f2a751f096ef0aba12d84eb26530cf837 4998 electrotest_0.0-1_amd64.deb
+Checksums-Sha256:
+ f411ee4c8c7396f0e48104d341245edfa63b1762b606d4e8ef604965941b603c 844 electrotest_0.0-1.dsc
+ 6930a71bde045c7684e4038fc9a6d2af3a3b5d283f35f9bc7927d779952bb4b5 7992 electrotest_0.0.orig.tar.gz
+ df26f0023b0e90c76b3de97044427667a0612fa4e10da36ae1fa2998619d45fd 2368 electrotest_0.0-1.debian.tar.xz
+ ec1f274538bb16b62866cae077fdc80ee794d00a8314c1fd90bf14060e6b0f47 4998 electrotest_0.0-1_amd64.deb
+Files:
+ 47efb85823f982e524c76265d2147927 844 devel optional electrotest_0.0-1.dsc
+ a486b6134aa4b4ee2295373d2c22972d 7992 devel optional electrotest_0.0.orig.tar.gz
+ 2176304b9cd435ea535cd1dac00c7a02 2368 devel optional electrotest_0.0-1.debian.tar.xz
+ b6dee60455991105225a4406f0628914 4998 libs optional electrotest_0.0-1_amd64.deb

@@ -1,0 +1,102 @@
+#!/bin/bash
+
+prefix = /usr/local
+
+#installations katalogen för programmet
+INSTDIR = $(DESTDIR)$(prefix)/bin
+
+#installations katalogen för bibliotek
+LIBDIR = $(DESTDIR)$(prefix)/lib
+
+#Denna filkatalog som vi befinner oss i
+CURRENT_DIR = $(shell pwd)
+
+#Mappen som biblioteken ska in i
+LIB_FOLDER = lib
+
+#Kompilator
+CC = gcc
+
+# -g ger debuggnings information
+# -Wall ger varningar
+CFLAGS = -g -Wall -std=c99
+
+#-fPIC flaggan säger att vi kommer använda objektet som shared objekt
+# och -shared flaggan så kompileras detta till dynamisk bibliotek
+LIBFLAGS = -g -shared -fPIC
+
+OBJECTS = electrotest.o
+
+C_FILES = src/electrotest.c
+
+#alla headers
+HEADERS = include/libresistance.h include/libpower.h include/libcomponent.h
+
+#Namnet av programmet
+PROG = electrotest
+
+#länkar och skapar programmet efter objekten i ordning
+# flaggan och path -L$(CURRENT_DIR)/$(LIB_FOLDER) säger att länka till lib mappen där biblioteken är placerade
+# så vi inte får fel som att den inte kan hitta /usr/bin/ld: cannot find -lresistance eller -lpower eller -lcomponent
+#program1 för make all länkning till de lokala biblioteken $(CURRENT_DIR)/$(LIB_FOLDER)
+program1: $(OBJECTS)
+	$(CC) $(CFLAGS) $(OBJECTS) -o $(PROG) -L.  -Wl,-rpath,$(CURRENT_DIR)/$(LIB_FOLDER) -L$(CURRENT_DIR)/$(LIB_FOLDER) -lresistance -lpower -lcomponent
+
+#program2 för install länkning till de publika biblioteken /usr/lib
+program2: $(OBJECTS)
+	$(CC) $(CFLAGS) $(OBJECTS) -o $(PROG) -L. -lresistance -lpower -lcomponent
+
+
+#kompilerar c filerna efter c flagga -g -Wall
+$(OBJECTS):  $(C_FILES) $(HEADERS)
+	$(CC) $(CFLAGS) -c $(C_FILES) -L.  -lresistance -lpower -lcomponent
+
+clean:
+	rm -rf *.o $(PROG) *.so  
+
+distclean: clean 
+  
+all: Part1b
+
+
+Part1b: program1
+	
+
+
+# Om filen är en directory	
+#Kopiera
+#sätt exekverbara rättigheter till alla för programmet
+#ta bort skriv rättigheter till andra och grupper för programmet
+
+install: Part2b
+			
+Part2b: program2
+		@if [ -d $(INSTDIR) ];\
+		then\
+		cp $(PROG) $(INSTDIR);\
+		chmod a+x $(INSTDIR)/$(PROG);\
+		chmod og-w $(INSTDIR)/$(PROG);\
+		echo "Installed in $(INSTDIR)" ;\
+		else\
+		echo "Sorry, folder $(INSTDIR) does not exist";\
+		fi
+
+
+#Kontrollera om programmet finns
+#ta bort den från directory /usr/bin
+#Om inte ge utskrift att den har redan tagits bort
+#Om inte så existerar inte directoryn
+	
+uninstall:
+		@if [ -e $(INSTDIR)/$(PROG) ];\
+		then\
+		rm $(INSTDIR)/$(PROG);\
+		echo "Program is removed from directory $(INSTDIR)";\
+		elif [ -d $(INSTDIR) ];\
+		then\
+		echo "Program already removed from $(INSTDIR)";\
+		else\
+		echo "Directory $(INSTDIR) does not exist";\
+		fi
+
+.PHONY: all install clean distclean uninstall

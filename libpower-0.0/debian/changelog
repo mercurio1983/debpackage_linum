@@ -1,0 +1,10 @@
+libpower (0.0-1) UNRELEASED; urgency=low
+          [Martti Mercurio]
+  *  Adding soname and libcomponent realname
+
+          [Martti Merurio]
+  *  Changed the Makefile 
+  
+  * Initial release (Closes: #2000) 
+  
+ -- Martti Mercurio <mercurio@kth.se>  Fri, 11 Jan 2019 20:22:40 +0100

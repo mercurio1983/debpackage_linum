@@ -1,0 +1,38 @@
+Format: 1.8
+Date: Fri, 11 Jan 2019 20:22:40 +0100
+Source: libpower
+Binary: libpower0
+Architecture: source amd64
+Version: 0.0-1
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: Martti Mercurio <mercurio@kth.se>
+Changed-By: Martti Mercurio <mercurio@kth.se>
+Description:
+ libpower0  - auto-generated package by debmake
+Closes: 2000
+Changes:
+ libpower (0.0-1) UNRELEASED; urgency=low
+ .
+           [Martti Mercurio]
+   *  Adding soname and libcomponent realname
+ .
+           [Martti Merurio]
+   *  Changed the Makefile
+ .
+   * Initial release (Closes: #2000)
+Checksums-Sha1:
+ 8570d6f0d6f8aea8c0ab8bf2a2f05073cbd1f86b 819 libpower_0.0-1.dsc
+ fa1d3aafdeff8b3a055b9bb403551ff875b64d6f 1807 libpower_0.0.orig.tar.gz
+ f084b48c2055494993b3462044a506573ceefdda 1952 libpower_0.0-1.debian.tar.xz
+ 6c5896afb81da4ebf6d26bb9c4cc80023ba1c718 3914 libpower0_0.0-1_amd64.deb
+Checksums-Sha256:
+ 025972d2a816205eecb2d48fc2cc9de7f628f3ea839e5b4b83ce8699347c0bf6 819 libpower_0.0-1.dsc
+ 65e7d810611f5fa5c91a1b31faae76d2158608ba7bd77e80a1cb94a74c66e67c 1807 libpower_0.0.orig.tar.gz
+ 9cf5366e031f413aea17e5ed8d70f8737c502dfd599454dcce3a1ff407b29597 1952 libpower_0.0-1.debian.tar.xz
+ 34966ab66964df0548c55694f6bcc9dba8cae86a093ecf32bf0bdb57f0fd079d 3914 libpower0_0.0-1_amd64.deb
+Files:
+ c37265e5410ac7d55482f4224e2f9f6f 819 devel optional libpower_0.0-1.dsc
+ de826bf31d51aeb9b9aae3b80f24d7ad 1807 devel optional libpower_0.0.orig.tar.gz
+ d9f46edc0499c2c99edfc2bb39044608 1952 devel optional libpower_0.0-1.debian.tar.xz
+ acacf5cf7512d56b38bb49e2179291f5 3914 libs optional libpower0_0.0-1_amd64.deb

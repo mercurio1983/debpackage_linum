@@ -1,0 +1,38 @@
+Format: 1.8
+Date: Fri, 11 Jan 2019 20:22:40 +0100
+Source: libresistance
+Binary: libresistance0
+Architecture: source amd64
+Version: 0.0-1
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: Martti Mercurio <mercurio@kth.se>
+Changed-By: Martti Mercurio <mercurio@kth.se>
+Description:
+ libresistance0 - auto-generated package by debmake
+Closes: 2000
+Changes:
+ libresistance (0.0-1) UNRELEASED; urgency=low
+ .
+           [Martti Mercurio]
+   *  Adding soname and libcomponent realname
+ .
+           [Martti Merurio]
+   *  Changed the Makefile
+ .
+   * Initial release (Closes: #2000)
+Checksums-Sha1:
+ dd1d16b7f846174b167526d53086b3d9fcad275d 864 libresistance_0.0-1.dsc
+ c62b4316e42feccbe76c889efb2f044927cb833b 1836 libresistance_0.0.orig.tar.gz
+ f50f6946b1863bfc13bcd527bf2af047242bb07b 1964 libresistance_0.0-1.debian.tar.xz
+ b21bed1d5055f6f3f83e5399ab027f15832354a8 3858 libresistance0_0.0-1_amd64.deb
+Checksums-Sha256:
+ 9c385c20ffec260b04c45d94f3bb2501ee29aa26940b171ef4e37802af8cfc99 864 libresistance_0.0-1.dsc
+ e5f976fb73e673d6ad9a68c8817e2f12f03e659f37857152ab4d8c09ef0a1578 1836 libresistance_0.0.orig.tar.gz
+ 5b9231c6dc71e2e98a43c02fe6cde9016ed1f561cdefe66a12d5200075a7a34b 1964 libresistance_0.0-1.debian.tar.xz
+ 08a1a5f549e02347de13d046e987d240a65d30cb4f9b80047d31143693d14668 3858 libresistance0_0.0-1_amd64.deb
+Files:
+ 8faf89467d5f923029322479dafb2d8e 864 devel optional libresistance_0.0-1.dsc
+ 73c719ffdec2a0ad5e43843fe07680e2 1836 devel optional libresistance_0.0.orig.tar.gz
+ 9b065c6a9aafabec016d5706aa5ed9d5 1964 devel optional libresistance_0.0-1.debian.tar.xz
+ f1ad0bfe8fe2dc4662196f3d25346c9e 3858 libs optional libresistance0_0.0-1_amd64.deb

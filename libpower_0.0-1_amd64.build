@@ -1,0 +1,70 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc
+dpkg-buildpackage: source package libpower
+dpkg-buildpackage: source version 0.0-1
+dpkg-buildpackage: source distribution UNRELEASED
+dpkg-buildpackage: source changed by Martti Mercurio <mercurio@kth.se>
+ dpkg-source --before-build libpower-0.0
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean  
+   dh_testdir
+   dh_auto_clean
+	make -j1 distclean
+make[1]: Entering directory '/home/mercurio/Linux_som_utvecklingsmiljö/debpackage_linum/libpower-0.0'
+rm -rf *.o *.so libpower.so.0 libpower.so.0.0.0
+make[1]: Leaving directory '/home/mercurio/Linux_som_utvecklingsmiljö/debpackage_linum/libpower-0.0'
+   dh_clean
+ dpkg-source -b libpower-0.0
+dpkg-source: info: using source format '3.0 (quilt)'
+dpkg-source: info: building libpower using existing ./libpower_0.0.orig.tar.gz
+dpkg-source: info: building libpower in libpower_0.0-1.debian.tar.xz
+dpkg-source: info: building libpower in libpower_0.0-1.dsc
+ debian/rules build
+dh build  
+   dh_testdir
+   dh_update_autotools_config
+   dh_auto_configure
+   dh_auto_build
+	make -j1
+make[1]: Entering directory '/home/mercurio/Linux_som_utvecklingsmiljö/debpackage_linum/libpower-0.0'
+gcc -c -g -fPIC src/libpower.c
+gcc -g -shared -fPIC -Wl,-soname=libpower.so.0 -o libpower.so.0.0.0 libpower.o 
+ln -s libpower.so.0.0.0 libpower.so.0
+ln -s libpower.so.0.0.0 libpower.so
+make[1]: Leaving directory '/home/mercurio/Linux_som_utvecklingsmiljö/debpackage_linum/libpower-0.0'
+   dh_auto_test
+ fakeroot debian/rules binary
+dh binary  
+   dh_testroot
+   dh_prep
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/home/mercurio/Linux_som_utvecklingsmiljö/debpackage_linum/libpower-0.0'
+dh_auto_install -- prefix=/usr
+	make -j1 install DESTDIR=/home/mercurio/Linux_som_utvecklingsmiljö/debpackage_linum/libpower-0.0/debian/libpower0 AM_UPDATE_INFO_DIR=no prefix=/usr
+make[2]: Entering directory '/home/mercurio/Linux_som_utvecklingsmiljö/debpackage_linum/libpower-0.0'
+install -D libpower.so.0.0.0 \
+		/home/mercurio/Linux_som_utvecklingsmiljö/debpackage_linum/libpower-0.0/debian/libpower0/usr/lib/x86_64-linux-gnu/libpower.so.0.0.0
+ln -s libpower.so.0.0.0 /home/mercurio/Linux_som_utvecklingsmiljö/debpackage_linum/libpower-0.0/debian/libpower0/usr/lib/x86_64-linux-gnu/libpower.so.0
+make[2]: Leaving directory '/home/mercurio/Linux_som_utvecklingsmiljö/debpackage_linum/libpower-0.0'
+make[1]: Leaving directory '/home/mercurio/Linux_som_utvecklingsmiljö/debpackage_linum/libpower-0.0'
+   dh_installdocs
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_strip
+   dh_makeshlibs
+   dh_shlibdeps
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'libpower0' in '../libpower0_0.0-1_amd64.deb'.
+ dpkg-genchanges  >../libpower_0.0-1_amd64.changes
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build libpower-0.0
+dpkg-buildpackage: full upload (original source is included)
+Now running lintian...
+Finished running lintian.

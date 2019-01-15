@@ -1,0 +1,38 @@
+Format: 1.8
+Date: Fri, 11 Jan 2019 20:22:40 +0100
+Source: libcomponent
+Binary: libcomponent0
+Architecture: source amd64
+Version: 0.0-1
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: Martti Mercurio <mercurio@kth.se>
+Changed-By: Martti Mercurio <mercurio@kth.se>
+Description:
+ libcomponent0 - auto-generated package by debmake
+Closes: 2000
+Changes:
+ libcomponent (0.0-1) UNRELEASED; urgency=low
+ .
+           [Martti Mercurio]
+   *  Adding soname and libcomponent realname
+ .
+           [Martti Merurio]
+   *  Changed the Makefile
+ .
+   * Initial release (Closes: #2000)
+Checksums-Sha1:
+ e97193d3cae537e6674b77820bc78c973f27b41d 829 libcomponent_0.0-1.dsc
+ ddb8389f08e4261f508d4c3377307f08205b3902 3472 libcomponent_0.0.orig.tar.gz
+ 5bdfc4a366d8b7ad97c6163c47d2162cc2d2bb62 1692 libcomponent_0.0-1.diff.gz
+ 094d4a2a811be29f3c902e2dc63bc2298a9432fe 4346 libcomponent0_0.0-1_amd64.deb
+Checksums-Sha256:
+ 6552f0b1de699e077a7b758c1db8372091becbbd6d8fff61ed563d9e2daca947 829 libcomponent_0.0-1.dsc
+ c743ec9f25bcc6598f39e09aa7c0d1a094a96df026b4e8827b4f5129589a7897 3472 libcomponent_0.0.orig.tar.gz
+ e6432f310cb572833e3e43f15d22984f12c6226b8f06f5ffcb418603eee1acaf 1692 libcomponent_0.0-1.diff.gz
+ 681366deb57570378bf8d5fb51af95a23a6422b217ca2d84543dfe6c75b332b7 4346 libcomponent0_0.0-1_amd64.deb
+Files:
+ 4b52e666b978c23d51ad05fd90d64210 829 devel optional libcomponent_0.0-1.dsc
+ 9f7ddadb31aba20e4e03c158b4c761e9 3472 devel optional libcomponent_0.0.orig.tar.gz
+ 56c7beddc7f284c12bd2ab82f9004586 1692 devel optional libcomponent_0.0-1.diff.gz
+ aa3bc2b3535312d96aeb33e0bec09a63 4346 libs optional libcomponent0_0.0-1_amd64.deb

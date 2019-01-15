@@ -1,0 +1,19 @@
+.TH LIBCOMPONENT.SO "26 October 2018"
+.SH NAME
+electrotest / A program that computes the resistance, power and E12-series resistors 
+.SH SYNOPSIS
+\fBint eletrotest.
+.SH DESCRIPTION
+.PP
+\fBThe electrotest is i terminal program where you type in the voltage, connection in series of in parallel,
+number of resistors and the value of the resistors you connect. The stuff that it outputs is the sum of the 
+resistance, power depending on the voltage and number of E12-serie resistors in series that
+replaces the original resistance.
+.SS OPTIONS
+.PP
+The program has a terminal input where you type in the values
+.SH RESOURCES
+.PP
+This program depends on packages like libcomponent0, libpower0 and libresistance0. 
+.SH AUTHORS
+Martti Mercurio
